@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+{{super()}}
+<div id="content" class="headings">
+   <h3>Showing images for {{ user_date }}</h3>
+</div>
+<hr>
+
+<div style="text-align:center;font-family:Helvetica,sans-serif;font-size:0.85em;">
+   <p>Natural images available:</p>
+</div>
+
+<div>
+   <table style="font-size:0.78em; margin-left: auto; margin-right: auto;" cellpadding="1" cellspacing="1">
+   <tbody>
+     {% for images in image_list_natural %}
+     <tr>
+       <td style="text-align: right;">
+         <a href="{{ archive_n }}{{ images.image }}.png" target="_blank">{{ images.image }}.png</a>
+       </td>
+       <td style="text-align: left;">
+         <span>&nbsp; Lat/Lon: ( <a href="https://www.google.com/maps/@?api=1&map_action=map&center={{ images.centroid_coordinates.lat }}%2C{{ images.centroid_coordinates.lon }}&zoom=4&basemap=terrain" target="_blank">{{ images.centroid_coordinates.lat }}, {{ images.centroid_coordinates.lon }}</a>&nbsp;)</span>
+       </td>
+     </tr>
+     {% endfor %}
+   </tbody>
+   </table>
+</div>
+
+<div style="text-align:center;font-family:Helvetica,sans-serif;font-size:0.85em;">
+   <p>Enhanced images available:</p>
+</div>
+   <table style="font-size:0.78em; margin-left: auto; margin-right: auto;" cellpadding="1" cellspacing="1">
+   <tbody>
+     {% for images in image_list_enhanced %}
+     <tr>
+       <td style="text-align: right;">
+         <a href="{{ archive_e }}{{ images.image }}.png" target="_blank">{{ images.image }}.png</a>
+       </td>
+       <td style="text-align: left;">
+         <span>&nbsp; Lat/Lon: ( <a href="https://www.google.com/maps/@?api=1&map_action=map&center={{ images.centroid_coordinates.lat }}%2C{{ images.centroid_coordinates.lon }}&zoom=4&basemap=terrain" target="_blank">{{ images.centroid_coordinates.lat }}, {{ images.centroid_coordinates.lon }}</a>&nbsp;)</span>
+       </td>
+     </tr>
+     {% endfor %}
+   </tbody>
+   </table>
+</div>
+
+<hr>
+
+{% endblock %}

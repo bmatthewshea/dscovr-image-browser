@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+{% block content %}
+<div style="text-align:center;font-family:Helvetica,sans-serif;color:white;">
+    <form action="display" method="get">
+      {{ form.UserDate(class='_datepicker') }}
+      {{ form.hidden_tag() }}
+      <input type="submit" value="Find">
+    </form>
+</div>
+<br/>
+{% endblock %}

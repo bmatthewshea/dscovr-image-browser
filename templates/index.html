@@ -1,0 +1,25 @@
+{%- extends "base.html" %}
+
+{% block content %}
+{{ super() }}
+<div class="jumbotron headings">
+  <p>Deep Space Climate Observatory</p>
+  <p>and</p>
+  <p>Earth Polychromatic Imaging Camera</p>
+  <br />
+  <span>Image Browser</span>
+  <br />
+</div>
+
+<div style="text-align:center;font-family:Helvetica,sans-serif;color:white;">
+    <form action="display" method="get">
+      {{ form.UserDate(class='_datepicker') }}
+      {{ form.hidden_tag() }}
+      <input type="submit" value="Find">
+    </form>
+    <br/>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
