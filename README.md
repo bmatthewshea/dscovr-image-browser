@@ -8,26 +8,25 @@ https://github.com/bmatthewshea/DSCOVR-Blue-Marble
 
 To run this web app:
 
-    Install [Flask](https://flask.palletsprojects.com/en/stable/installation/) with venv.
+1. Install [Flask](https://flask.palletsprojects.com/en/stable/installation/ "Flask Installation Page") with venv.
 
-    Clone this repository.
+2. Clone this repository.
 
-    Go into the downloaded folder and run the builtin webserver:
+3. Go into the cloned folder and run the builtin webserver:
 
 ```
 flask run -h 0.0.0.0 -p 8000
 ```
 
-    Open a browser on same machine (or same local network):
+4. Open a browser on same machine (or same local network):
 
-    Same machine:
+    &emsp;Same machine:
 
-    http://127.0.0.1:8000
+    &emsp;http://127.0.0.1:8000
 
-    From a machine on same LAN (example - use your own network address!):
+    &emsp;From a machine on same LAN (example - use your own network address!):
 
-    http://192.168.200.1:8000
-
+    &emsp;http://192.168.200.1:8000
 
 
 - The image link will open the image in a new tab.
