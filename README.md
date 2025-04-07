@@ -8,6 +8,8 @@ https://github.com/bmatthewshea/DSCOVR-Blue-Marble
 
 To run this web app:
 
+    Install [Flask](https://flask.palletsprojects.com/en/stable/installation/) with venv.
+
     Clone this repository.
 
     Go into the downloaded folder and run the builtin webserver:
